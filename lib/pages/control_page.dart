@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:road_sign_detector/pages/location_page.dart';
 
 class ControlPage extends StatefulWidget {
   final String ip;
@@ -196,6 +197,15 @@ Future<void> refreshDashboard() async {
     "ROAD SIGN DETECTOR",
   ),
   actions: [
+    IconButton(
+      icon: const Icon(Icons.location_on),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const LocationPage()),
+        );
+      },
+    ),
     IconButton(
       icon: const Icon(Icons.zoom_out),
       onPressed: zoomOut,
