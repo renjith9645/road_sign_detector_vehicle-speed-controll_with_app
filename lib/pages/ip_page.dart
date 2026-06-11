@@ -10,7 +10,7 @@ class IpPage extends StatefulWidget {
 
 class _IpPageState extends State<IpPage> {
   final TextEditingController ipController = TextEditingController(
-    text: "192.168.1.81:5000",
+    text: "192.168.1.36:5000",
   );
 
   @override
